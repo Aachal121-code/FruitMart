@@ -146,85 +146,125 @@ span{
     }
 }
 .advantages{
-    height: auto;
     width: 100%;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .special_offer{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.special_offer:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 .part1{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+    gap: 20px;
 }
 .part2{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    gap: 20px;
 }
 .special_offer img{
     height: 300px;
     width: 300px;
     mix-blend-mode: multiply;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
 }
-
+.special_offer img:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
 .special_offer p{
-    font-size: 4rem;
-    color: rgb(194, 67, 67);
+    font-size: 3.5rem;
+    color: #d6336c;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 .sunday_offer{
     padding-top: 150px;
     text-align: center;
-    
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 40px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+.sunday_offer:hover{
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 .sunday_offer p{
-    font-family: 'Times New Roman', Times, serif;
-
-}
-@media only screen and (max-width: 1145px){
-    .special_offer img{
-        height: 200px;
-        width: 200px;
-    }
-    .special_offer p{
-        font-size: 3rem;
-    }
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5a2a83;
 }
 #headline{
     font-size: 3rem;
     text-transform: uppercase;
-    color: purple;
+    color: #5a2a83;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 #subline{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: capitalize;
-    color: purple;
+    color: #7a3f9a;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 #sun_matter{
-    font-size: 2rem;
-
+    font-size: 1.8rem;
+    color: #4a1f6e;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 #festival_offer{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: capitalize;
-    color: purple;
+    color: #5a2a83;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 #fest_matter{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: #4a1f6e;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 #p1{
-    font-size: 3rem;
+    font-size: 2.8rem;
+    color: #7a3f9a;
+    font-weight: 700;
 }
-
 #happy{
     height: 200px;
     width: 200px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+#happy:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
 }
 .note2{
     width: 100%;
@@ -271,11 +311,3 @@ footer p{
     line-height: 40px;
     color: white;
 }
-
-
-
-
-
-
-
-
