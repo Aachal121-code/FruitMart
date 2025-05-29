@@ -195,12 +195,9 @@ span{
     width: 300px;
     mix-blend-mode: multiply;
     border-radius: 15px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
-.special_offer img:hover{
-    transform: scale(1.1);
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
-}
+
 .special_offer p{
     font-size: 3.5rem;
     color: #d6336c;
@@ -269,11 +266,9 @@ span{
     width: 200px;
     border-radius: 15px;
     transition: transform 0.3s ease;
+    mix-blend-mode: multiply;
 }
-#happy:hover{
-    transform: scale(1.1);
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
-}
+
 .note2{
     width: 100%;
     background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
