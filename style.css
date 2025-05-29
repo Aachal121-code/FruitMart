@@ -88,7 +88,7 @@ span{
     background-size: cover;
 }
 .intro{
-    height: 700px;
+    height: fit-content;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -273,7 +273,7 @@ span{
     width: 100%;
     background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
     text-align: center;
-    margin-top: 200px;
+    margin-top: 80px;
     padding: 20px 0;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);

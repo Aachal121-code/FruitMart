@@ -1,112 +1,251 @@
-*{
+/* phone.css - Completely new responsive design for mobile view */
+
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
-    border: border-box;    /* height and width box me hi count honi chahiye  */
 }
-.logo{
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav-search {
+    width: 80%;
+    max-width: 200px;
+    height: 20px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive navbar styles */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 8px;
+        gap: 2px;
+        width: 100%;
+    }
+    .logo {
+        font-size: 1rem;
+        flex: 1;
+        text-align: left;
+    }
+    .nav-search {
+        width: 50%;
+        max-width: none;
+        height: 30px;
+        margin: 0;
+    }
+    .search-input {
+        font-size: 1rem;
+    }
+    .search-select {
+        width: 40px;
+        
+    }
+    .search-icon {
+        width: 25px;
+    }
+    .nav-address p {
+        font-size: 0.8rem;
+        display: none;
+    }
+    .accounts, .cart {
+        font-size: 0.9rem;
+        margin: 0 5px;
+    }
+    .cart a{
+        font-size: 0.7rem;
+    }
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+.search-select{
+    font-size: .8rem;
+}
+.search-input {
+    flex: 1;
+    font-size: .5rem;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.accounts, .cart {
+    font-size: .8rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.accounts #sign a {
     font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.nav-address p {
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.background {
+    height: 180px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.special_offer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.special_offer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.special_offer p {
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.sunday_offer {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+#headline, #subline, #festival_offer {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#sun_matter, #fest_matter {
+    font-size: 1rem;
+    text-align: center;
+    margin: 5px 10px;
+}
+
+.note {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.note p {
+    font-size: 1.1rem;
     font-weight: 500;
 }
-.nav-search{
-    height: 20px;
-    width: 170px;
-}
-.search-icon{
-    width: 25px;
-}
-.search-input{
-    font-size: 0.7rem;
-}
-.accounts{
-    font-size: 0.7rem;
-} 
-.accounts #sign a{
-    font-size: 0.3rem;
-}
-.cart a{
-    font-size: 0.7rem;
-}
-.nav-address p{
-    font-size: 0.6rem;
-    display: none;
-}
-.background{
-    height: 300px;
-}
-.special_offer img{
-    height: 150px;
-    width: 150px;
-}
-.special_offer{
-    margin-top: 40px;
-    column-gap: 10px;
 
-}
-.special_offer p{
-    font-size: 1.7rem;
-    padding-top: 20px;
-    text-align: center;
-}
-.sunday_offer{
-    padding-top: 80px;
-}
-#headline{
-    font-size: 2rem;
-}
-#subline{
-    font-size: 2rem;
-}
-#sun_matter{
-    font-size: 1.5rem;
-}
-#festival_offer{
-    font-size: 2rem;
-}
-#fest_matter{
-    font-size: 1.5rem;
-}
-.note{
-    height: 60px;
-    width: 100%;
-}
-.note p{
-    font-size: 1.3rem;
-    text-align: center;
-} 
-.intro{
-    height: 1100px ;
+.intro {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
 }
-.intropic{
+
+.intropic {
     width: 100%;
-    height: 330px;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 15px;
 }
-.intro img{
-    height: 150px;
-    width: 150px;
+
+.intro img {
+    width: 120px;
+    height: 120px;
     border: 2px solid transparent;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
-.intro p{
-    font-size: 1.5rem;
-    padding: 15px;
+
+.intro p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 10px 10px 10px;
 }
-img:hover{
+
+img:hover {
     border: 2px solid white;
 }
-.note2 p{
-    font-size: 2rem;
+
+.note2 p {
+    font-size: 1.5rem;
     font-weight: 600;
+    text-align: center;
+    margin: 15px 0;
 }
-.available img{
-    height: 80PX;
-    width: 80PX;
+
+.available img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    object-fit: contain;
 }
-footer p{
-    font-size: 0.7rem;
-    line-height: 30px;
+
+footer p {
+    font-size: 0.8rem;
+    line-height: 22px;
     color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Additional responsiveness for very small screens */
+@media only screen and (max-width: 360px) {
+    .logo {
+        font-size: 1rem;
+    }
+    .search-input {
+        font-size: 0.9rem;
+    }
+    #headline, #subline, #festival_offer {
+        font-size: 1.1rem;
+    }
+    .special_offer img {
+        width: 80px;
+        height: 80px;
+    }
+    .intro img {
+        width: 90px;
+        height: 90px;
+    }
+    .available img {
+        width: 50px;
+        height: 50px;
+    }
 }
