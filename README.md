@@ -20,6 +20,4 @@ This is a simple responsive website for FruitMart, showcasing various grocery an
 
 To view the website, simply open the `index.html` file in any modern web browser.
 
-## License
 
-This project is open source and available under the MIT License.
