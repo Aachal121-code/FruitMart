@@ -1,4 +1,15 @@
 // Animate .intropic cards on scroll
+
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector('.navbar');
+    const toggle = document.querySelector('.nav-toggle');
+    if (toggle) {
+        toggle.addEventListener('click', function () {
+            nav.classList.toggle('active');
+        });
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const intropicEls = document.querySelectorAll('.intropic');
     const availImgs = document.querySelectorAll('.available img');
