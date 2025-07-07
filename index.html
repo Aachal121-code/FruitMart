@@ -1,115 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FruitMart - Freshness Delivered</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="phone.css" media="only screen and (max-width: 600px)">
-
-    <title>FruitMart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body>
-    <div class="navbar">
-        <div class="logo border">
-            Fruit<span>Mart</span>
-        </div>
-        <div class="nav-address border">
-            <p>Deliver to</p>
-            <div class="icon">
-                <p><i class=" fa-solid fa-location-dot"></i> India</p>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-apple-whole"></i> Fruit<span>Mart</span>
+            </div>
+            <div class="nav-address">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Deliver to <strong>India</strong></span>
+            </div>
+            <form class="nav-search" autocomplete="off">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Fruits</option>
+                    <option>Baskets</option>
+                    <option>Organic</option>
+                </select>
+                <input class="search-input" placeholder="Search fresh fruits..." />
+                <button class="search-icon" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="accounts">
+                <a href="#"><i class="fa-regular fa-user"></i> Account</a>
+                <a href="#" id="sign">Sign in</a>
+            </div>
+            <div class="cart">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Freshness at Your Doorstep</h1>
+            <p>Handpicked, organic, and delivered with care. Experience the taste of nature with FruitMart.</p>
+            <a href="#offers" class="cta-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="badges">
+                <span class="badge best">Best Seller</span>
+                <span class="badge organic">100% Organic</span>
+                <span class="badge fast"><i class="fa-solid fa-truck"></i> Fast Delivery</span>
             </div>
         </div>
-
-        <div class="nav-search">
-            <select class="search-select">
-                <option>All</option>
-            </select>
-            <input class="search-input" placeholder="search item...">
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+        <div class="hero-img">
+            <img src="photos/basket.jpeg" alt="Fruit Basket">
         </div>
-        <div class="accounts border">
-            <a href="#">Accounts/</a><br>
-            <a href="#" id="sign">Sign in</a>
-        </div>
-        <div class="cart border">
-            <a href="#"><i class="fa-solid fa-cart-shopping"> cart</i></a>
-        </div>
-    </div>
-    <div class="background">
+    </section>
 
-    </div>
+    <section class="note">
+        <p>Freshness you can feel, Sweetness you can taste!</p>
+    </section>
 
-    <div class="note">
-        <p>Freshness you can feel,
-            Sweetness you can taste!</p>
-    </div>
-    <div class="intro">
+    <section class="intro">
         <div class="intropic">
-            <img src="photos/caring.jpeg">
-            <p>We take great care in cultivating our fruits, ensuring they are grown with love and attention to quality.
-            </p>
+            <img src="photos/caring.jpeg" alt="Caring">
+            <p>We nurture every fruit with love and care, ensuring top-notch quality from farm to table.</p>
         </div>
         <div class="intropic">
-            <img src="photos/organic.jpeg">
-            <p>We practice organic farming, ensuring our products are grown naturally without synthetic chemicals.</p>
+            <img src="photos/organic.jpeg" alt="Organic">
+            <p>Our produce is 100% organic, grown without harmful chemicals for your health and the planet.</p>
         </div>
         <div class="intropic">
-            <img src="photos/connect.jpeg">
-            <p>We connect individuals and communities to foster collaboration in farming. Together we can grow and
-                thrive.</p>
+            <img src="photos/connect.jpeg" alt="Connect">
+            <p>We connect communities, supporting local farmers and sustainable agriculture.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="advantages">
+    <section class="advantages" id="offers">
         <div class="special_offer">
-            <div class="part1">
-                <img src="photos/questionemoji.jpeg" id="queemoji">
-                <p id="que">What about special offer ?</p>
+            <div class="offer-card">
+                <img src="photos/questionemoji.jpeg" alt="Special Offer">
+                <div>
+                    <h2>Special Offers Just For You!</h2>
+                    <p>Enjoy exclusive deals and discounts every week. Taste the best, pay less!</p>
+                </div>
             </div>
-            <div class="part2">
-                <p id="ans">Don't worry ! Here you go.</p>
-                <img src="photos/anseringemoji.jpeg" id="ansemoji">
+            <div class="offer-details">
+                <div class="offer-box">
+                    <img src="photos/happyemoji.jpeg" alt="Sunday Offer">
+                    <h3>Sunday Special</h3>
+                    <p>Buy 1 Get 1 Free on all fruits every Sunday!</p>
+                </div>
+                <div class="offer-box">
+                    <img src="photos/anseringemoji.jpeg" alt="Festival Offer">
+                    <h3>Festival Fiesta</h3>
+                    <p>20% Off on all fruit baskets during festivals!</p>
+                </div>
+            </div>
+            <div class="offer-cta">
+                <a href="#available" class="cta-btn">Grab Your Offer</a>
             </div>
         </div>
+    </section>
 
-        <div class="sunday_offer">
-            <p id="headline">Sunday special & Festival Fruit Fiesta!</p><br>
-            <img src="photos/happyemoji.jpeg" id="happy"><br>
-            <p id="subline">Sunday Special : Buy 1 get 1 Free!</p><br>
-            <p id="sun_matter">Indulge in our handpicked selection of the freshest fruits.<br>
-                 Buy any fruit and get another
-                of equal or lesser value absolutely FREE!<br>
-                 Perfect for family gatherings or a healthy snack!</p><br><br>
-            <p id="festival_offer">Festival offer : 20% off on all fruit baskets!</p><br>
-            <p id="fest_matter">Celebrate the festive season with our beautifully arranged fruit baskets.<br>
-                Enjoy 20% off on all baskets filled with seasonal delights.<br> A perfect gift for loved ones or a treat for
-                yourself!</p><br><br>
-            <p id="p1">Shop Now and Save Big!</p>
-        </div>
-    </div>
-
-    <div class="note2">
+    <section class="note2">
         <p>Available On</p>
-    </div>
-    <div class="available">
-        <a href="#" id="img1"><img src="photos/zepto.jpg"></a>
-        <a href="#" id="img1"><img src="photos/swiggy.jpg"></a>
-        <a href="#" id="img1"><img src="photos/amazon.jpg"></a>
-        <a href="#" id="img1"><img src="photos/blinkit.jpg"></a>
-        <a href="#" id="img1"><img src="photos/zomato.jpg"></a>
-    </div>
-    <footer>
-        <p>Made on 26 August 2024 in India.<br>
-            love to supply healthy and benefitial products<br>
-            Made with Love</p>
-    </footer>
-</body>
+    </section>
+    <section class="available" id="available">
+        <a href="#"><img src="photos/zepto.jpg" alt="Zepto"></a>
+        <a href="#"><img src="photos/swiggy.jpg" alt="Swiggy"></a>
+        <a href="#"><img src="photos/amazon.jpg" alt="Amazon"></a>
+        <a href="#"><img src="photos/blinkit.jpg" alt="Blinkit"></a>
+        <a href="#"><img src="photos/zomato.jpg" alt="Zomato"></a>
+    </section>
 
+    <footer>
+        <div class="footer-content">
+            <p>Made on 26 August 2024 in India.<br>
+            Supplying healthy and beneficial products.<br>
+            <span class="footer-love"><i class="fa-solid fa-heart"></i> Made with Love</span></p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
 </html>
