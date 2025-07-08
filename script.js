@@ -10,6 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', function () {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Newsletter fake submit
+        document.querySelector('.newsletter-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
+            this.reset();
+        });
+        
 document.addEventListener("DOMContentLoaded", function () {
     const intropicEls = document.querySelectorAll('.intropic');
     const availImgs = document.querySelectorAll('.available img');
