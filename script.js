@@ -1,4 +1,4 @@
-// Animate .intropic cards on scroll
+// --- Review Carousel Data & Rendering ---
 const reviews = [
     {
         name: "Priya S.",
@@ -32,6 +32,16 @@ const reviews = [
     }
 ];
 
+function renderStars(starCount) {
+    let html = '';
+    let full = Math.floor(starCount);
+    let half = starCount % 1 >= 0.5;
+    for (let i = 0; i < full; i++) html += '<i class="fa-solid fa-star"></i>';
+    if (half) html += '<i class="fa-solid fa-star-half-stroke"></i>';
+    for (let i = full + half; i < 5; i++) html += '<i class="fa-regular fa-star"></i>';
+    return html;
+}
+
 function renderReviews() {
     const carousel = document.getElementById('testimonial-carousel');
     carousel.innerHTML = '';
@@ -47,28 +57,9 @@ function renderReviews() {
         carousel.appendChild(div);
     });
 }
-
-function renderStars(starCount) {
-    let html = '';
-    let full = Math.floor(starCount);
-    let half = starCount % 1 >= 0.5;
-    for (let i = 0; i < full; i++) html += '<i class="fa-solid fa-star"></i>';
-    if (half) html += '<i class="fa-solid fa-star-half-stroke"></i>';
-    for (let i = full + half; i < 5; i++) html += '<i class="fa-regular fa-star"></i>';
-    return html;
-}
 renderReviews();
 
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.querySelector('.navbar');
-    const toggle = document.querySelector('.nav-toggle');
-    if (toggle) {
-        toggle.addEventListener('click', function () {
-            nav.classList.toggle('active');
-        });
-    }
-});
-
+// --- Carousel Scroll Buttons ---
 const carousel = document.getElementById('testimonial-carousel');
 document.querySelector('.carousel-btn.left').onclick = () => {
     carousel.scrollBy({ left: -320, behavior: 'smooth' });
@@ -77,30 +68,43 @@ document.querySelector('.carousel-btn.right').onclick = () => {
     carousel.scrollBy({ left: 320, behavior: 'smooth' });
 };
 
+// --- Star Rating Input Logic ---
 let selectedRating = 0;
-document.querySelectorAll('.star-rating-input .stars i').forEach(star => {
+const starEls = document.querySelectorAll('.star-rating-input .stars i');
+
+starEls.forEach(star => {
     star.addEventListener('mouseenter', function () {
-        highlightStars(this.dataset.value);
+        fillStars(this.dataset.value);
     });
     star.addEventListener('mouseleave', function () {
-        highlightStars(selectedRating);
+        fillStars(selectedRating);
     });
     star.addEventListener('click', function () {
-        selectedRating = this.dataset.value;
-        highlightStars(selectedRating);
+        const value = Number(this.dataset.value);
+        if (selectedRating === value) {
+            selectedRating = 0;
+        } else {
+            selectedRating = value;
+        }
+        fillStars(selectedRating);
     });
 });
-function highlightStars(rating) {
-    document.querySelectorAll('.star-rating-input .stars i').forEach(star => {
-        if (star.dataset.value <= rating) {
-            star.classList.add('selected');
+
+function fillStars(rating) {
+    starEls.forEach(star => {
+        if (Number(star.dataset.value) <= rating) {
+            star.classList.remove('fa-regular');
+            star.classList.add('fa-solid');
+            star.style.color = '#ffc107';
         } else {
-            star.classList.remove('selected');
+            star.classList.remove('fa-solid');
+            star.classList.add('fa-regular');
+            star.style.color = '';
         }
     });
 }
 
-// Add review form logic
+// --- Add Review Form Logic ---
 document.getElementById('review-form').addEventListener('submit', function (e) {
     e.preventDefault();
     const name = document.getElementById('reviewer-name').value.trim();
@@ -124,7 +128,7 @@ document.getElementById('review-form').addEventListener('submit', function (e) {
     alert('Thank you for your review!');
 });
 
-// FAQ accordion
+// --- FAQ Accordion ---
 document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', function () {
         const item = this.parentElement;
@@ -132,27 +136,14 @@ document.querySelectorAll('.faq-q').forEach(q => {
     });
 });
 
-// Newsletter fake submit
+// --- Newsletter Fake Submit ---
 document.querySelector('.newsletter-form').addEventListener('submit', function (e) {
     e.preventDefault();
     alert('Thank you for subscribing!');
     this.reset();
 });
 
-document.querySelectorAll('.faq-q').forEach(q => {
-            q.addEventListener('click', function () {
-                const item = this.parentElement;
-                item.classList.toggle('active');
-            });
-        });
-
-        // Newsletter fake submit
-        document.querySelector('.newsletter-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for subscribing!');
-            this.reset();
-        });
-        
+// --- Animate .intropic and .available img on scroll (optional) ---
 document.addEventListener("DOMContentLoaded", function () {
     const intropicEls = document.querySelectorAll('.intropic');
     const availImgs = document.querySelectorAll('.available img');
