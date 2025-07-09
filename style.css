@@ -686,11 +686,6 @@ header {
     cursor: pointer;
     transition: color 0.2s;
 }
-.star-rating-input .stars i.selected,
-.star-rating-input .stars i:hover,
-.star-rating-input .stars i.selected ~ i {
-    color: #ffc107;
-}
 
 /* Advantages / Offers Section */
 .advantages {
