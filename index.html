@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FruitMart - Freshness Delivered</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
@@ -110,43 +111,31 @@
 
     <section class="testimonials">
         <div class="testimonials-title">What Our Customers Say</div>
-        <div class="testimonial-list">
-            <div class="testimonial">
-                <i class="fa-solid fa-quote-left"></i>
-                <p>Absolutely fresh and delicious fruits! Delivery was super quick and the packaging was eco-friendly. Highly recommended.</p>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <div class="customer">Priya S.</div>
+        <div class="testimonial-carousel-container">
+            <button class="carousel-btn left" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="testimonial-carousel" id="testimonial-carousel">
+                <!-- Reviews will be injected here by JS -->
             </div>
-            <div class="testimonial">
-                <i class="fa-solid fa-quote-left"></i>
-                <p>The organic fruit box is a must-try. My kids love the taste and I love the quality!</p>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+            <button class="carousel-btn right" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="add-review-section">
+            <h3>Add Your Review</h3>
+            <form id="review-form">
+                <input type="text" id="reviewer-name" placeholder="Your Name" required>
+                <input type="email" id="reviewer-email" placeholder="Your Email" required>
+                <textarea id="review-text" placeholder="Your review..." required></textarea>
+                <div class="star-rating-input">
+                    <span>Rating:</span>
+                    <span class="stars">
+                        <i class="fa-regular fa-star" data-value="1"></i>
+                        <i class="fa-regular fa-star" data-value="2"></i>
+                        <i class="fa-regular fa-star" data-value="3"></i>
+                        <i class="fa-regular fa-star" data-value="4"></i>
+                        <i class="fa-regular fa-star" data-value="5"></i>
+                    </span>
                 </div>
-                <div class="customer">Rahul M.</div>
-            </div>
-            <div class="testimonial">
-                <i class="fa-solid fa-quote-left"></i>
-                <p>Great offers and friendly customer support. FruitMart is my go-to for healthy snacking.</p>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <div class="customer">Sneha K.</div>
-            </div>
+                <button type="submit" class="cta-btn">Submit Review</button>
+            </form>
         </div>
     </section>
 
@@ -185,11 +174,26 @@
         <p>Available On</p>
     </section>
     <section class="available" id="available">
-        <a href="#" alt="Zepto"><img src="photos/zepto.jpg" alt="Zepto"></a>
-        <a href="#" alt="Swiggy"><img src="photos/swiggy.jpg" alt="Swiggy"></a>
-        <a href="#" alt="Amazon"><img src="photos/amazon.jpg" alt="Amazon"></a>
-        <a href="#" alt="Blinkit"><img src="photos/blinkit.jpg" alt="Blinkit"></a>
-        <a href="#" alt="Zomato"><img src="photos/zomato.jpg" alt="Zomato"></a>
+        <div class="app-card">
+            <img src="photos/zepto.jpg" alt="Zepto">
+            <span>Zepto</span>
+        </div>
+        <div class="app-card">
+            <img src="photos/swiggy.jpg" alt="Swiggy">
+            <span>Swiggy</span>
+        </div>
+        <div class="app-card">
+            <img src="photos/amazon.jpg" alt="Amazon">
+            <span>Amazon</span>
+        </div>
+        <div class="app-card">
+            <img src="photos/blinkit.jpg" alt="Blinkit">
+            <span>Blinkit</span>
+        </div>
+        <div class="app-card">
+            <img src="photos/zomato.jpg" alt="Zomato">
+            <span>Zomato</span>
+        </div>
     </section>
 
     <footer>
@@ -211,5 +215,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
-</body> 
+</body>
+
 </html>
