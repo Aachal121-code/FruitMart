@@ -127,40 +127,41 @@ nav .cart a {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   nav.navbar {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2vw;
+    gap: 10px;
   }
-
+  nav .logo {
+    font-size: 1.5rem;
+    gap: 6px;
+    width: auto;
+  }
+  nav .nav-address {
+    font-size: 0.95rem;
+    gap: 4px;
+    margin-left: 10px;
+  }
   nav .nav-search {
     width: 100%;
-    margin: 10px 0;
+    margin: 8px 0;
+    max-width: none;
+    flex: 1 1 100%;
   }
-
-  nav .nav-address {
-    display: none; 
-  }
-
   nav .accounts,
   nav .cart {
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  nav .logo {
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  nav .search-select,
-  nav .search-input,
-  nav .search-icon {
-    font-size: 0.9rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    width: auto;
+    justify-content: flex-end;
   }
 }
-
 .search-select {
     border: none;
     background: var(--light);
