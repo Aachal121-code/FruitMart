@@ -32,7 +32,7 @@ header {
     z-index: 100;
 }
 
-.navbar {
+nav.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,7 +45,7 @@ header {
     position: relative;
 }
 
-.logo {
+nav .logo {
     font-size: 2.2rem;
     font-weight: 900;
     color: var(--primary);
@@ -55,8 +55,8 @@ header {
     gap: 10px;
 }
 
-.logo span {
-    color: var(--accent);
+nav .logo span {
+   color: var(--accent);
 }
 
 .logo i {
@@ -64,12 +64,13 @@ header {
     font-size: 2.1rem;
 }
 
-.nav-address {
-    font-size: 1.1rem;
-    color: var(--deep);
+
+nav .nav-address {
     display: flex;
     align-items: center;
+    color: var(--deep);
     gap: 8px;
+    font-size: 1rem;
 }
 
 .nav-address i {
@@ -77,41 +78,87 @@ header {
     margin-right: 4px;
 }
 
-.nav-search {
-    display: flex;
-    align-items: center;
-    background: var(--secondary);
-    border-radius: 50px;
-    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.06);
-    overflow: hidden;
-    width: 340px;
-    transition: box-shadow var(--transition);
+nav .nav-search {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  margin: 10px;
 }
 
-.nav-search:focus-within {
-    box-shadow: 0 4px 20px rgba(44, 62, 80, 0.13);
+nav .search-select,
+nav .search-input,
+nav .search-icon {
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
 }
 
-@media (max-width: 900px) {
-    .navbar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 18px;
-        padding: 18px 2vw;
-    }
+nav .search-select {
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
 
-    .nav-search {
-        width: 100%;
-        margin: 0 auto;
-    }
+nav .search-input {
+  flex: 1;
+  border-left: none;
+  border-right: none;
+}
 
-    .accounts,
-    .cart {
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 18px;
-    }
+nav .search-icon {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+}
+
+nav .accounts,
+nav .cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav .accounts a,
+nav .cart a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 800px) {
+  nav.navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav .nav-search {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  nav .nav-address {
+    display: none; 
+  }
+
+  nav .accounts,
+  nav .cart {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav .logo {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  nav .search-select,
+  nav .search-input,
+  nav .search-icon {
+    font-size: 0.9rem;
+  }
 }
 
 .search-select {
