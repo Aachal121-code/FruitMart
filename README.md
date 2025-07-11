@@ -1,82 +1,46 @@
 # FruitMart Website
 
-This is a simple responsive website for FruitMart, showcasing various grocery and organic products. The project is built using HTML and CSS, with a focus on clean design and user-friendly interface.
+## Project Description
+FruitMart is a responsive and modern website designed to showcase fresh fruits, fruit baskets, and organic products. The site emphasizes freshness, quality, and convenience, providing users with an engaging shopping experience. It features a clean design with intuitive navigation and interactive elements to enhance user engagement.
 
 ## Features
+- Responsive layout optimized for desktops, tablets, and mobile devices using CSS media queries.
+- Navigation bar with logo, delivery location, search form (note: search functionality is not implemented), account and cart links.
+- Hero section with a call-to-action button and promotional badges.
+- Introduction section highlighting care, organic produce, and community connection.
+- Special offers and discounts section with visually appealing cards.
+- Testimonials carousel displaying customer reviews with star ratings.
+- Review submission form with star rating input and validation.
+- FAQ section with accordion-style expandable questions.
+- Newsletter subscription form with confirmation alert.
+- Links to partner grocery delivery apps with logos.
+- Footer with social media links and site information.
+- Use of FontAwesome icons for visual enhancement.
 
-- Responsive layout optimized for different screen sizes
-- Styled with custom CSS (style.css and phone.css)
-- Includes a gallery of images representing various grocery delivery services and organic products
-- Easy to customize and extend for other similar projects
+## Technologies Used
+- HTML5 for structure and content.
+- CSS3 for styling, including CSS variables and animations.
+- JavaScript for interactivity, including carousel, form handling, and animations.
+- FontAwesome for icons.
+- Images stored locally in the `photos/` directory.
 
 ## Project Structure
-
-- `index.html` - Main HTML file for the website
-- `style.css` - Primary stylesheet for desktop and general styling
-- `phone.css` - Additional stylesheet for phone/smaller screen styling
-- `photos/` - Directory containing images used in the website
+- `index.html` - Main HTML file containing the website structure and content.
+- `style.css` - Primary stylesheet handling all styling and responsive design.
+- `script.js` - JavaScript file managing interactive features such as testimonials, reviews, FAQ, and newsletter.
+- `photos/` - Directory containing all images used throughout the website.
+- `README.md` - Project documentation.
 
 ## Usage
+To view the website, simply open the `index.html` file in any modern web browser. No additional setup or server is required.
 
-To view the website, simply open the `index.html` file in any modern web browser.
+## Notes
+- The search bar in the navigation currently shows an alert indicating the search functionality is not implemented.
+- The site is designed to be easily customizable and extendable for similar projects.
+- All images are stored locally in the `photos/` folder and referenced in the HTML.
 
+## License
+This project is open for personal and educational use. Please credit the original author if reused or modified.
 
-<!-- .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 22px 5vw;
-    background: var(--light);
-    border-radius: 0 0 var(--radius) var(--radius);
-    animation: fadeInDown 1s;
-    flex-wrap: wrap;
-    gap: 18px;
-    position: relative;
-}
-
-.logo {
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: var(--primary);
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo span {
-    color: var(--accent);
-}
-
-.logo i {
-    color: var(--organic);
-    font-size: 2.1rem;
-}
-
-.nav-address {
-    font-size: 1.1rem;
-    color: var(--deep);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.nav-address i {
-    color: var(--primary);
-    margin-right: 4px;
-}
-
-.nav-search {
-    display: flex;
-    align-items: center;
-    background: var(--secondary);
-    border-radius: 50px;
-    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.06);
-    overflow: hidden;
-    width: 340px;
-    transition: box-shadow var(--transition);
-}
-
-.nav-search:focus-within {
-    box-shadow: 0 4px 20px rgba(44, 62, 80, 0.13);
-} -->
+---
+Made with ❤️ on 26 August 2024 in India.
